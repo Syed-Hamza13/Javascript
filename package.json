@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "chatgpt": "^5.2.5",
+    "freegptjs": "^0.0.2"
+  }
+}

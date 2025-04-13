@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript is best</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    let intervalID; // Store the interval ID
+
+    const ti = function () {
+        intervalID = setInterval(function (str) {
+            console.log(Date.now(), str);
+        }, 1000, "hi");
+    };
+
+    document.querySelector('#start').addEventListener('click', () => {
+        // Prevent multiple intervals
+            ti();
+        
+    });
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(intervalID);
+         // Reset the interval ID
+    });
+</script>
+
+</html>
